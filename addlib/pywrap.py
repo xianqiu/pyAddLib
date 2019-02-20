@@ -18,8 +18,8 @@ __all__ = [
 from .gomethods import *
 
 
-def provinces():
-    return go_provinces().decode('utf-8').split('\t')
+def provinces(mainland=True):
+    return go_provinces(mainland).decode('utf-8').split('\t')
 
 
 def cities(of_province):
@@ -44,8 +44,8 @@ def parse_address(province_name=None, city_name=None, district_name=None):
     return go_parseAddress(p, c, d).decode('utf-8').split('\t')
 
 
-def province_codes():
-    return go_provinceCodes().decode('utf-8').split('\t')
+def province_codes(mainland=True):
+    return go_provinceCodes(mainland).decode('utf-8').split('\t')
 
 
 def city_codes(of_province):

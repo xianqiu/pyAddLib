@@ -36,6 +36,7 @@ go_initialize(data_path.encode('utf-8'))
 # +++++++++++++++++++
 
 go_provinces = cdll.provinces
+go_provinces.argtypes = [ctypes.c_bool]
 go_provinces.restype = ctypes.c_char_p
 
 go_cities = cdll.cities
@@ -55,6 +56,7 @@ go_parseAddress.argtypes = [ctypes.c_char_p, ctypes.c_char_p, ctypes.c_char_p]
 go_parseAddress.restype = ctypes.c_char_p
 
 go_provinceCodes = cdll.provinceCodes
+go_provinces.argtypes = [ctypes.c_bool]
 go_provinceCodes.restype = ctypes.c_char_p
 
 go_cityCodes = cdll.cityCodes
